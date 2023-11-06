@@ -22,3 +22,18 @@
     * C O M M E N T
 
 \*  ========================================================================  */
+
+h1 {
+    font:           normal normal bold 16px/24px Montserrat;
+    letter-spacing: 0px;
+    color:          #FFFFFF;
+    opacity:        1;
+}
+
+h2 {
+    font:           normal normal bold 10px/12px Montserrat;
+    letter-spacing: 2.4px;
+    color:          #FFFFFF;
+    text-transform: uppercase;
+    opacity:        1;
+}

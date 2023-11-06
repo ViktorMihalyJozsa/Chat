@@ -116,14 +116,46 @@ aside {
 
 
 header {
-    grid-area: header;
+    grid-area:        header;
+
+    display:          flex;
+    justify-content:  space-between;
+    align-items:      center;
 
     height:           8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
-    background-color: red;
+    padding-left:     3.333vh;  /*  30px*1.2=36px/10.8=3.333vh  */
+    background-color: #6200ea;
 }
+
+    .user-name {
+        text-align: left;
+    }
+
+    .site-logo,
+    .site-logo-a,
+    .site-logo-img {
+        width:  150px;
+        height: 40px;
+    }
+
+    .student-name {
+        display:        flex;
+        flex-direction: row;
+        align-items:    center;
+    }
+
+        .student-img {
+            float:         right;
+            width:         4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
+            height:        4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
+            margin:        2.222vh;  /*  20px*1.2=24px/10.8=2.222vh  */
+            border:        1px;
+            border-radius: 50%;
+        }
 
 main {
     grid-area: main;
+
     height:    auto;
 }
 
