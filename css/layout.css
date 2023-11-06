@@ -1,0 +1,142 @@
+/*  ========================================================================  *\
+    
+    * O V E R V I E W
+          
+    * This file manages the layout of the page.
+    * Instead of placing them separately, we link them to the components.
+
+    * This creates a connected but separate system.
+    * Which does nothing but say some parameters:
+    * For example: what size should they be and where should they appear.
+    
+    * The classes declared here can be called on any container.
+    * They wear the right size and behave the right way.
+
+    * FHD or Tablet or Mobil element-size(px) to vievport-size(vw) calc.;
+    * Viewport Width = width - ca.1vw ( min. 8px to max. 20px = scroll width);
+
+    * FHD width calc. = 1920px - 1vw or 20px(19.20) = 1900px;
+    * HD or Tablet width calc. = 1024px - 1vw or 10px(10.24) = 1014px;
+    * Mobil width calc. = 768px - 1vw or 8px(7.68) = 760px;
+    
+\*  ========================================================================  */
+
+/*  ========================================================================  *\
+    
+    * C O M M E N T
+    
+    * CONTAINER
+    *     .container;
+    *      @media(max-width: 768px);
+
+    * ASIDE
+    *     section;
+    *         .search;
+    *         .img-search;
+    *     aside;
+    *         figure;
+    *         .button;
+    
+    * MAIN
+    *     header;
+    *     main;
+    *         .comment;
+    *         .form;
+
+\*  ========================================================================  */
+
+
+/*  ========================================================================  *\
+    C O N T A I N E R
+\*  ========================================================================  */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "section header"
+        "aside main";
+}
+
+@media(max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header"
+            "section"
+            "aside"
+            "main";
+    }
+}
+
+
+/*  ========================================================================  *\
+    A S I D E
+\*  ========================================================================  */
+
+section {
+    grid-area: section;
+
+    background-color: lightcoral;
+}
+
+    .search {
+        height: 8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
+    }
+
+    .img-search {
+        height: auto;
+    }
+
+aside {
+    grid-area: aside;
+    height:    auto;
+}
+
+    figure {
+        grid-area: list;
+
+        height:           53.333vh;  /*  480px*1.2=576px/10.8=53.333vh */
+        background-color: yellowgreen;
+    }
+
+    .button {
+        grid-area: button;
+
+        height:           8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
+        background-color: blue;
+    }
+
+/*  ========================================================================  *\
+    M A I N
+\*  ========================================================================  */
+
+
+header {
+    grid-area: header;
+
+    height:           8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
+    background-color: red;
+}
+
+main {
+    grid-area: main;
+    height:    auto;
+}
+
+    .comment {
+        grid-area: comment;
+
+        height: 75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
+        background-color: yellow;
+    }
+
+    .form {
+        grid-area: messeage;
+
+        height: 15.555vh;  /*  140px*1.2=168px/10.8=15.555vh */
+        background-color: aqua;
+    }

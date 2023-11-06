@@ -1,0 +1,24 @@
+/*  ========================================================================  *\
+    
+    * O V E R V I E W
+  
+    * This file describes the components that make up the page.
+    * From their internal layout, the color of their text, etc.
+  
+    * It was visible until now, but here it is very strongly enforced by:
+    * BEM (Block - Element - Modifier) thinking in the code.
+
+    * FHD or Tablet or Mobil element-size(px) to vievport-size(vw) calc.;
+    * Viewport Width = width - ca.1vw ( min. 8px to max. 20px = scroll width);
+
+    * FHD width calc. = 1920px - 1vw or 20px(19.20) = 1900px;
+    * HD or Tablet width calc. = 1024px - 1vw or 10px(10.24) = 1014px;
+    * Mobil width calc. = 768px - 1vw or 8px(7.68) = 760px;
+
+\*  ========================================================================  */
+
+/*  ========================================================================  *\
+
+    * C O M M E N T
+
+\*  ========================================================================  */
