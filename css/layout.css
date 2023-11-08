@@ -80,50 +80,100 @@
 section {
     grid-area:  search;
 
-    height:     8.888vh;  /*  80px*1.2=96px/10.8=8.888vh  */
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    opacity:    1;
+    height:        8.704vh;              /*  80px*1.2=96px-2px(border-bottom)=94px/10.8=8.704vh  */
+    border-bottom: 2px solid #F4F3F5;
+    background:    #FFFFFF;
+    opacity:       1;
 }
 
-    .search-write {
-        display:          flex;
-        justify-content:  space-between;
-        align-items:      center;
+    form {
+        display:         flex;
+        justify-content: space-between;
+        align-items:     center;
 
-        margin:           1.666vh 2.777vh 1.666vh 2.037vh;  /*  18px 30px 18px 22px - (15px*1.2=18px/10.8(1vh)=1.666vh)  */
-        padding:          1.481vh 1.481vh 1.481vh 2.963vh;  /*  16px 16px 16px 32px  */
+        height:          40px;
+        margin:          12px 22px 12px 14px;
+        background:      #F4F3F5;
+        opacity:         1;
+    }  
 
-        background:       #F4F3F5 0% 0% no-repeat padding-box;
-        opacity:          1;
-    }
+        .search {
+            float:            left;
+            width:            calc(100% - 40px);
+            height:           auto;  /*  40px-3px(border-bottom)  */
+            padding:          12px 0px 8px 24px;
 
-        .search-icon {
-            text-align:     center;
-            font:           normal normal normal 20px/20px Font Awesome 5 Free;
-            letter-spacing: 0px;
-            color:          #211138;
-            opacity:        0.25;
+            border:           none;
+            border-color:     transparent;
+            outline:          none;
+
+            background-color: #F4F3F5;
         }
+
+            .search:focus {
+                border-bottom: 3px solid #6200ea;
+                opacity:       1;
+            }
+
+            .search-font {
+                text-align:     left;
+                font:           normal normal bold 14px/18px Montserrat;
+                letter-spacing: 0px;
+                color:          #211138;
+                opacity:        0.25;
+            }
+
+        .search-button {
+            float:            right;
+            cursor:           pointer;
+            width:            40px;
+            height:           40px;
+            margin:           0 auto;
+            padding:          12px;
+            border:           none;
+            border-radius:    0;
+            background-color: #F4F3F5;
+        }
+
+            .search-icon {
+                text-align:     center;
+                font:           normal normal bold 20px/20px Font Awesome 5 Free;
+                letter-spacing: 0px;
+                color:          #211138;
+                opacity:        0.25;
+            }
+
 
 
 aside {
     grid-area: aside;
+
     height:    auto;
 }
 
     figure {
-        grid-area: list;
-
         height:           53.333vh;  /*  480px*1.2=576px/10.8=53.333vh */
-        background-color: yellowgreen;
+        background-color: #FFFFFF;
     }
 
-    .button {
-        grid-area: button;
+        figcaption {
+            height: 64px;
+            border-bottom: 2px solid #F4F3F5;
+        }
 
-        height:           8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
-        background-color: blue;
+    .list-button {
+        cursor:           pointer;
+        width:            calc(100% - 24px);
+        height:           auto;
+        margin:           12px;
+        padding:          12px;
+        border:           2px solid #6200EA;
+        border-radius:    24px;
+        opacity:          1;
+
+        background-color: #FFFFFF;
     }
+
 
 /*  ========================================================================  *\
     M A I N
@@ -176,15 +226,11 @@ main {
 }
 
     .comment {
-        grid-area: comment;
-
         height: 75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
         background-color: yellow;
     }
 
     .form {
-        grid-area: messeage;
-
         height: 15.555vh;  /*  140px*1.2=168px/10.8=15.555vh */
         background-color: aqua;
     }
