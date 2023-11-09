@@ -74,23 +74,22 @@
 
 
 /*  ========================================================================  *\
-    A S I D E
+    S E A R C H
 \*  ========================================================================  */
 
-section {
-    grid-area:  search;
-
+.search-section {
+    grid-area:     search;
+    width:         auto;
     height:        8.704vh;              /*  80px*1.2=96px-2px(border-bottom)=94px/10.8=8.704vh  */
     border-bottom: 2px solid #F4F3F5;
     background:    #FFFFFF;
     opacity:       1;
 }
 
-    form {
+    .search-form {
         display:         flex;
         justify-content: space-between;
         align-items:     center;
-
         height:          40px;
         margin:          12px 22px 12px 14px;
         background:      #F4F3F5;
@@ -102,11 +101,9 @@ section {
             width:            calc(100% - 40px);
             height:           auto;  /*  40px-3px(border-bottom)  */
             padding:          12px 0px 8px 24px;
-
             border:           none;
             border-color:     transparent;
             outline:          none;
-
             background-color: #F4F3F5;
         }
 
@@ -115,12 +112,9 @@ section {
                 opacity:       1;
             }
 
-            .search-font {
-                text-align:     left;
-                font:           normal normal bold 14px/18px Montserrat;
-                letter-spacing: 0px;
-                color:          #211138;
-                opacity:        0.25;
+            .search::placeholder {
+                font-weight: bold;
+                opacity:     0.25;
             }
 
         .search-button {
@@ -129,7 +123,7 @@ section {
             width:            40px;
             height:           40px;
             margin:           0 auto;
-            padding:          12px;
+            padding:          10px;
             border:           none;
             border-radius:    0;
             background-color: #F4F3F5;
@@ -144,12 +138,19 @@ section {
             }
 
 
+/*  ========================================================================  *\
+    A S I D E
+\*  ========================================================================  */
 
 aside {
     grid-area: aside;
-
     height:    auto;
 }
+
+
+    /*  ========================================================================  *\
+        U S E R - L I S T
+    \*  ========================================================================  */
 
     figure {
         height:           53.333vh;  /*  480px*1.2=576px/10.8=53.333vh */
@@ -157,11 +158,16 @@ aside {
     }
 
         figcaption {
-            height: 64px;
+            height:        64px;
             border-bottom: 2px solid #F4F3F5;
         }
 
-    .list-button {
+
+    /*  ========================================================================  *\
+        U S E R - L I S T - B U T T O N
+    \*  ========================================================================  */
+
+    .user-list-button {
         cursor:           pointer;
         width:            calc(100% - 24px);
         height:           auto;
@@ -176,7 +182,7 @@ aside {
 
 
 /*  ========================================================================  *\
-    M A I N
+    H E A D E R
 \*  ========================================================================  */
 
 
@@ -192,9 +198,7 @@ header {
     background-color: #6200ea;
 }
 
-    .user-name {
-        float: left;
-    }
+    .user-name { float: left; }
 
     .site-logo,
     .site-logo-a,
@@ -219,18 +223,100 @@ header {
             border-radius: 50%;
         }
 
+
+/*  ========================================================================  *\
+    M A I N
+\*  ========================================================================  */
+
 main {
     grid-area: main;
 
     height:    auto;
 }
 
+
+    /*  ========================================================================  *\
+        C O M M E N T
+    \*  ========================================================================  */
+
     .comment {
-        height: 75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
+        height:           75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
         background-color: yellow;
     }
 
-    .form {
-        height: 15.555vh;  /*  140px*1.2=168px/10.8=15.555vh */
-        background-color: aqua;
+
+    /*  ========================================================================  *\
+        M E S S E A G E
+    \*  ========================================================================  */
+
+    .message-section {
+
+        width:         auto;
+        height:        11.111vh;                         /*  140px*1.2=168px-paddings(2*20px*1.2=48px)=120px/10.8(1vh)=11.111vh  */
+        padding:       2.222vh 7.777vh 2.222vh 2.222vh;  /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
+        border-left:   2px solid #F4F3F5;
+        background:    #FFFFFF;
+        opacity:       1;
     }
+    
+        .message-form {
+            position:   relative;
+            background: #F4F3F5;
+            opacity:    1;
+        }
+
+            .message-textarea {
+                position:         absolute;
+                width:            65.104vw;             /*  1250px/19.2(1vw)=65.104vw  */
+                height:           8.889vh;              /*  100px*1.2=120px/10.8(1vh)=11.111vh-padding(2.222vh)=8.889vh  */
+                padding:          1.777vh 0 0 2.666vh;  /*  16px*1.2=19.2px/10.8(1vh)=1.777vh & 
+                                                            24px*1.2=28.8px/10.8(1vh)=2.666vh  */
+                border:           0;
+                border-bottom:    .3333vh solid;
+                border-color:     transparent;
+                outline:          0;
+                background-color: #F4F3F5;
+                opacity:          0.75;
+            }
+
+                .message-textarea:focus { 
+                    border-bottom: 3px solid #6200ea;
+                    opacity:       1;
+                }
+
+                .message-textarea::placeholder {
+                    font-weight: bold;
+                    opacity:     0.25;
+                }
+
+            .message-paperclip-icon,
+            .message-smile-icon {
+                position:  absolute;
+                top:       1.6666vh;
+                right:     5.625vw;
+                font-size: 2.2222vh;
+                opacity:   0.25;
+            }
+
+            .message-paperclip-icon { right: 8.75vw; }
+
+            .message-button {
+                float:            right;
+                cursor:           pointer;
+                width:            5.555vh;  /*  60px/10.8(1vh)=5.555vh;  */
+                height:           5.555vh;  /*  60px/10.8(1vh)=5.555vh;  */
+                margin:           0 auto;
+                padding:          10px;
+                border:           none;
+                border-radius:    50%;
+                background-color: #6200ea;
+                text-align:       center;
+            }
+
+            .button-icon {
+                text-align:     center;
+                font:           normal normal bold 20px/20px Font Awesome 5 Free;
+                letter-spacing: 0px;
+                color:          #ffffff;
+                opacity:        1;
+            }

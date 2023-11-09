@@ -28,9 +28,9 @@
 <body class="container">
 
 
-    <section>
-        <form>
-            <input type="text" id="search" placeholder="Search" name="search" class="search search-font">
+    <section class="search-section">
+        <form class="search-form">
+            <input type="text" id="search" placeholder="Search" name="search" class="search form-text">
             <button type="submit" class="search-button">
                 <i class="search-icon fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
@@ -47,7 +47,7 @@
             <figcaption>List Name</figcaption>
             <figcaption>List Name</figcaption>
         </figure>
-        <button type="submit" class="list-button">
+        <button type="submit" class="user-list-button">
             <a href="#" class="button-write">Add New Contact</a>
         </button>
     </aside>
@@ -66,9 +66,28 @@
         <div class="comment">
             Comments
         </div>
-        <div class="form">
-            Messeage
-        </div>
+
+
+        <section class="message-section">
+
+            <form class="message-form">
+
+                <textarea id="message-textarea" name="message-textarea" placeholder="Type your message ..." class="message-textarea form-text"></textarea>
+
+                    <a href="#" class="message-paperclip-icon">
+                    <i class="fas fa-paperclip"></i></a>
+
+                    <a href="#" class="message-smile-icon">
+                    <i class="far fa-smile"></i></a>
+
+                <button type="submit" class="message-button">
+                    <i class="button-icon fa-solid fa-paper-plane fa-lg"></i>
+                </button>
+            </form>
+
+        </section>
+
+
     </main>
 
 
