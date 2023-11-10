@@ -81,7 +81,7 @@
     grid-area:     search;
     width:         auto;
     height:        8.704vh;              /*  80px*1.2=96px-2px(border-bottom)=94px/10.8=8.704vh  */
-    border-bottom: 2px solid #F4F3F5;
+    border-bottom: 1px solid #F4F3F5;
     background:    #FFFFFF;
     opacity:       1;
 }
@@ -152,15 +152,32 @@ aside {
         U S E R - L I S T
     \*  ========================================================================  */
 
-    figure {
-        height:           53.333vh;  /*  480px*1.2=576px/10.8=53.333vh */
+    ul {
+        height:           auto;       /*  480px*1.2=576px/10.8=53.333vh */
         background-color: #FFFFFF;
     }
 
-        figcaption {
-            height:        64px;
-            border-bottom: 2px solid #F4F3F5;
+        li {
+            height:        5.555vh;              /*  80px*1.2=96px/10.8(1vh)=8.888vh  */
+            padding:       1.666vh;              /*  15px*1.2=18px/10.8(1vh)=1.666vh  */
+            border-bottom: 1px solid #F4F3F5;
         }
+
+            .user-box-text-p {
+                white-space:    nowrap;
+                width:          19vw;
+                text-overflow:  ellipsis;
+                overflow:       hidden;
+                margin:         0 0 .5555vh 4.0625vw;
+                }
+
+            .user-box-images {
+                float:         left;
+                width:         40px;
+                height:        40px;
+                border:        1px;
+                border-radius: 50%;
+            }
 
 
     /*  ========================================================================  *\
@@ -241,7 +258,7 @@ main {
 
     .comment {
         height:           75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
-        background-color: yellow;
+        background-color: #F4F3F5;
     }
 
 
