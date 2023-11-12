@@ -24,6 +24,7 @@
 \*  ========================================================================  */
 
 h1 {
+    text-transform: none;
     font:           normal normal bold 16px/24px Montserrat;
     letter-spacing: 0px;
     color:          #FFFFFF;
@@ -37,35 +38,70 @@ h2, h3 {
     opacity:        1;
 }
 
-h2 { color: #FFFFFF; }
+h2 { 
+    color: #FFFFFF; 
+}
 
 h3 {
     margin-left: 4.0625vw;
     color:       #6200EA; 
 }
 
-.user-box-text-p {
-    text-align: left;
-    font: normal normal normal 14px/20px Montserrat;
+.user-box-text,
+.chat-content-left-text,
+.chat-content-right-text {
+    text-transform: none;
+    text-align:     left;
     letter-spacing: 0px;
-    color: #211138;
-    opacity: 1;
 }
 
+    .chat-content-left-text,
+    .chat-content-right-text {
+        font: normal normal normal 14px/16px Montserrat;
+    }
+
+    .user-box-text {
+        font: normal normal normal 14px/20px Montserrat;
+    }
+
+    .user-box-text,
+    .form-text,
+    .chat-content-left-text {
+        color:   #211138;
+        opacity: 1;
+    }
+
+    .chat-content-right-text {
+        color:   #FFFFFF;
+        opacity: 1;
+    }
+
 .form-text {
+    text-transform: none;
     text-align:     left;
     font:           normal normal bold 14px/18px Montserrat;
     letter-spacing: 0px;
-    color:          #211138;
-    opacity:        1;
 }
 
-a, a:hover, a:visited {
+a, a:hover, 
+a:visited,
+a:active {
     text-decoration: none;
     cursor:          pointer;
 }
 
-.button-write {
+.user-box {
+    display:       inline-block;
+    margin:        0;                        /*  0px  */
+    border-left:   0.555vh solid #FFFFFF;  /*  5px*1.2=6px/10.8(1vh)=0.555vh  */
+}
+
+    .user-box:hover,
+    .user-box:active {
+        border-left:   0.555vh solid #6200ea;  /*  5px*1.2=6px/10.8(1vh)=0.555vh  */
+    }
+
+.button-text {
     text-transform: uppercase;
     text-align:     center;
     font:           normal normal bold 10px/12px Montserrat;

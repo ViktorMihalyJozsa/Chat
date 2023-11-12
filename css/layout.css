@@ -144,6 +144,8 @@
 
 aside {
     grid-area: aside;
+
+    width:     auto;
     height:    auto;
 }
 
@@ -153,31 +155,56 @@ aside {
     \*  ========================================================================  */
 
     ul {
-        height:           auto;       /*  480px*1.2=576px/10.8=53.333vh */
+        width:            auto;
+        height:           auto;
         background-color: #FFFFFF;
     }
 
         li {
-            height:        5.555vh;              /*  80px*1.2=96px/10.8(1vh)=8.888vh  */
+            height:        5.556vh;              /*  80px*1.2=96px/10.8(1vh)=8.888vh-paddings(2*1.666vh=3.332vh)=5.556vh  */
             padding:       1.666vh;              /*  15px*1.2=18px/10.8(1vh)=1.666vh  */
             border-bottom: 1px solid #F4F3F5;
         }
 
-            .user-box-text-p {
+            .user-box-text {
                 white-space:    nowrap;
                 width:          19vw;
                 text-overflow:  ellipsis;
                 overflow:       hidden;
-                margin:         0 0 .5555vh 4.0625vw;
+                margin:         0 0 0.5555vh 4.063vw;  /*  0 0 6px 80px  */
                 }
 
-            .user-box-images {
-                float:         left;
-                width:         40px;
-                height:        40px;
+
+    /*  ========================================================================  *\
+        U S E R - I M A G E S
+    \*  ========================================================================  */
+
+            .user-images-header {
+                float:         right;
+                width:         4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
+                height:        4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
+                margin:        2.777vh;  /*  30px/10.8=2.222vh  */
                 border:        1px;
                 border-radius: 50%;
             }
+
+            .user-images-left {
+                float:          left;
+                width:          5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
+                height:         5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
+                margin-right:   0.937vw;
+                border-radius:  50%;
+            }
+
+            .user-images-right {
+                position:       absolute;
+                width:          5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
+                height:         5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
+                margin-right:   0;
+                right:          0;
+                border-radius:  50%;
+                bottom:         1.111vh;
+              }
 
 
     /*  ========================================================================  *\
@@ -193,7 +220,6 @@ aside {
         border:           2px solid #6200EA;
         border-radius:    24px;
         opacity:          1;
-
         background-color: #FFFFFF;
     }
 
@@ -210,12 +236,14 @@ header {
     justify-content:  space-between;
     align-items:      center;
 
-    height:           8.888vh;  /*  80px*1.2=96px/10.8=8.888vh */
-    padding-left:     3.703vh;  /*  40px/10.8=3.703vh  */
+    height:           8.888vh;        /*  80px*1.2=96px/10.8=8.888vh */
+    padding-left:     3.703vh;        /*  40px/10.8=3.703vh  */
     background-color: #6200ea;
 }
 
-    .user-name { float: left; }
+    .user-name { 
+        float: left; 
+    }
 
     .site-logo,
     .site-logo-a,
@@ -230,15 +258,6 @@ header {
         align-items:    center;
         float:          right;
     }
-
-        .student-img {
-            float:         right;
-            width:         4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
-            height:        4.444vh;  /*  40px*1.2=48px/10.8=4.444vh;  */
-            margin:        2.777vh;  /*  30px/10.8=2.222vh  */
-            border:        1px;
-            border-radius: 50%;
-        }
 
 
 /*  ========================================================================  *\
@@ -256,10 +275,67 @@ main {
         C O M M E N T
     \*  ========================================================================  */
 
-    .comment {
-        height:           75.555vh;  /*  680px*1.2=816px/10.8=75.555vh */
-        background-color: #F4F3F5;
-    }
+    .chat {
+        height:            64.445vh;                       /*  680px*1.2=816px/10.8(1vh)=75.555vh
+                                                              -padings(4.444vh+6.666vh=11.11vh)=64.445vh  */
+
+        padding:           4.444vh 3.75vw 6.666vh 3.75vw;  /*  48px 60px 72px 60px  */
+        overflow-y:        scroll;
+        background-color:  #F4F3F5;
+      }
+      
+        .chat-message { 
+            position: relative;
+            float:    right;
+        }
+
+        .clearfix {
+            display:  table;
+            clear:    both;
+        }
+      
+        .chat-times-left, .chat-typing {
+            float: left;
+            
+            margin: 0 0 0.555vh 3.75vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+        }
+
+        .chat-times-right {
+            float: right;
+
+            margin: 0 3.75vw 0.555vh 0;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+        }
+
+        .chat-times-left,
+        .chat-times-right,
+        .chat-typing {
+            text-transform: uppercase;
+            font-size:      1.333vh;    /*  12px*1.2=14.4px/10.8(1vh)=1.333vh  */
+            font-weight:    bold;
+            letter-spacing: 0.15vw;     /*  3px  */
+            color:          #b2acba;
+        }
+
+
+      
+        .chat-content-left {
+            max-width:        37.5vw;
+            padding:          2.222vh 1.25vw;
+            border-radius:    0 15px 15px 15px;
+            margin:           0 0 1.111vh 3.75vw;
+            background-color: #ffffff;
+            line-height:      2.222vh;
+        }
+      
+        .chat-content-right {
+            max-width:        37.5vw;
+            padding:          2.222vh 1.25vw;
+            border-radius:    15px 15px 0 15px;
+            margin:           0 3.75vw 1.111vh 0;
+            background-color: #b2acba;
+            line-height:      2.222vh;
+        }      
+
 
 
     /*  ========================================================================  *\

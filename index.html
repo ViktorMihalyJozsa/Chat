@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="zxx"> 
-
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <title>CHAT INTERFACE</title>
-
     <link rel="icon" type="image/png" href="images/favicon.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" 
           integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" 
           crossorigin="anonymous" referrerpolicy="no-referrer">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <script src="https://kit.fontawesome.com/1fb89a6226.js" crossorigin="anonymous"></script>
-
 </head>
 
-
 <body class="container">
-
 
     <section class="search-section">
         <form class="search-form">
@@ -37,94 +26,118 @@
         </form>
     </section>
 
-
     <aside>
         <ul>
-            <li>
-              <a href="#" class="user-box">
-                <img src="images/chat/user_avatar_01.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_01.png" alt="User Images" class="user-images-left">
                 <h3>Amy Adams</h3>
-                <p class="user-box-text-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <p class="user-box-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
               </a>
             </li>
-            <li>
-              <a href="#" class="">
-                <img src="images/chat/user_avatar_02.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_02.png" alt="User Images" class="user-images-left">
                 <h3>Marc</h3>
-                <p class="user-box-text-p">Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                <p class="user-box-text">Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
               </a>
             </li>
-            <li>
-              <a href="#" class="">
-                <img src="images/chat/user_avatar_03.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_03.png" alt="User Images" class="user-images-left">
                 <h3>Jacob</h3>
               </a>
             </li>
-            <li>
-              <a href="#" class="">
-                <img src="images/chat/user_avatar_04.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_04.png" alt="User Images" class="user-images-left">
                 <h3>Chris Smith</h3>
-                <p class="user-box-text-p">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                <p class="user-box-text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
               </a>
             </li>
-            <li>
-              <a href="#" class="">
-                <img src="images/chat/user_avatar_05.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_05.png" alt="User Images" class="user-images-left">
                 <h3>Mia Wong</h3>
-                <p class="user-box-text-p">Stet clita kasd gubergren.</p>
+                <p class="user-box-text">Stet clita kasd gubergren.</p>
               </a>
             </li>
-            <li>
-              <a href="#" class="">
-                <img src="images/chat/user_avatar_06.png" alt="user avatar" class="user-box-images">
+            <li class="user-box">
+              <a href="#">
+                <img src="images/chat/user_avatar_06.png" alt="User Images" class="user-images-left">
                 <h3>Jane</h3>
-                <p class="user-box-text-p">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+                <p class="user-box-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
               </a>
             </li>
           </ul>
         <button type="submit" class="user-list-button">
-            <a href="#" class="button-write">Add New Contact</a>
+            <a href="#" class="button-text">Add New Contact</a>
         </button>
     </aside>
-
 
     <header>
         <div class="username"><h1>Amy Adams</h1></div>
         <div class="site-logo"><a href="index.html" class="site-logo-a"><img src="images/Logo.png" alt="site logo" class="site-logo-img"></a></div>
         <div class="student-name">
             <h2>Student Name</h2>
-            <img src="images/chat/user_avatar_07.png" alt="Student Images" class="student-img">
+            <img src="images/chat/user_avatar_07.png" alt="User Images" class="user-images-header">
         </div>
     </header>
 
     <main>
-        <div class="comment">
-            Comments
+        <div class="chat">
+            <div>
+                <div class="clearfix">
+                    <small class="chat-times-left">Amy, 11:37</small>
+                </div>
+                <img src="images/chat/user_avatar_01.png" alt="User Images" class="user-images-left">
+                <p class="chat-content-left chat-content-left-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                  <br>eirmod tempor invidunt ut labore et dolore magna aliquyam erat. </p>
+                <p class="chat-content-left chat-content-left-text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+            </div>
+            <div class="chat-message clearfix">
+                <div>
+                    <div class="clearfix">
+                        <small class="chat-times-right">11:40</small>
+                    </div>
+                    <p class="chat-content-right chat-content-right-text">Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                      <br>ipsum dolor sit amet.</p>
+                    <img src="images/chat/user_avatar_07.png" alt="User Images" class="user-images-right">
+                </div>
+            </div>
+            <div>
+                <div class="clearfix">
+                    <small class="chat-times-left">Amy, 12:04</small>
+                </div>
+                <img src="images/chat/user_avatar_01.png" alt="User Images" class="user-images-left">
+                <p class="chat-content-left chat-content-left-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                  <br>eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+                </div>
+            <div class="chat-message clearfix">
+                <div>
+                    <div class="clearfix">
+                        <small class="chat-times-right">12:06</small>
+                    </div>
+                    <p class="chat-content-right chat-content-right-text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <p class="chat-content-right chat-content-right-text">Stet clita kasd gubergren.</p>
+                    <img src="images/chat/user_avatar_07.png" alt="User Images" class="user-images-right">
+                </div>
+            </div>
+            <small class="chat-typing">Amy is typing...</small>
         </div>
-
-
         <section class="message-section">
-
             <form class="message-form">
-
                 <textarea id="message-textarea" name="message-textarea" placeholder="Type your message ..." class="message-textarea form-text"></textarea>
-
                     <a href="#" class="message-paperclip-icon">
                     <i class="fas fa-paperclip"></i></a>
-
                     <a href="#" class="message-smile-icon">
                     <i class="far fa-smile"></i></a>
-
                 <button type="submit" class="message-button">
                     <i class="button-icon fa-solid fa-paper-plane fa-lg"></i>
                 </button>
             </form>
-
         </section>
-
-
     </main>
-
 
 </body>
 </html>
