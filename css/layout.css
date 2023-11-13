@@ -172,7 +172,7 @@ aside {
                 text-overflow:  ellipsis;
                 overflow:       hidden;
                 margin:         0 0 0.5555vh 4.063vw;  /*  0 0 6px 80px  */
-                }
+            }
 
 
     /*  ========================================================================  *\
@@ -272,7 +272,7 @@ main {
 
 
     /*  ========================================================================  *\
-        C O M M E N T
+        C H A T
     \*  ========================================================================  */
 
     .chat {
@@ -296,46 +296,36 @@ main {
       
         .chat-times-left, .chat-typing {
             float: left;
-            
             margin: 0 0 0.555vh 3.75vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
         }
 
         .chat-times-right {
-            float: right;
-
-            margin: 0 3.75vw 0.555vh 0;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+            float:  right;
+            margin: 0 3.75vw 0.555vh 30vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
         }
 
-        .chat-times-left,
-        .chat-times-right,
         .chat-typing {
-            text-transform: uppercase;
-            font-size:      1.333vh;    /*  12px*1.2=14.4px/10.8(1vh)=1.333vh  */
-            font-weight:    bold;
-            letter-spacing: 0.15vw;     /*  3px  */
-            color:          #b2acba;
+            float:  left;
+            margin: 18.518vh 0 0.555vh 3.75vw;  /*  200px 0px 6px 720px  */
         }
-
-
       
         .chat-content-left {
-            max-width:        37.5vw;
-            padding:          2.222vh 1.25vw;
+            width:            37.5vw;              /*  600px*1.2=720px/19.2(1vw)=37.5vw  */
+            padding:          2.222vh 1.25vw;      /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
             border-radius:    0 15px 15px 15px;
-            margin:           0 0 1.111vh 3.75vw;
+            margin:           0 0 1.111vh 3.75vw;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 60px*1.2=72px/19.2(1vw)=3.75vw  */
             background-color: #ffffff;
-            line-height:      2.222vh;
+            line-height:      2.222vh;             /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
         }
       
         .chat-content-right {
-            max-width:        37.5vw;
-            padding:          2.222vh 1.25vw;
+            width:            30vw;                /*  480px*1.2=576px/19.2(1vw)=30vw  */
+            padding:          2.222vh 1.25vw;      /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
             border-radius:    15px 15px 0 15px;
-            margin:           0 3.75vw 1.111vh 0;
+            margin:           0 3.75vw 1.111vh 0;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 60px*1.2=72px/19.2(1vw)=3.75vw  */
             background-color: #b2acba;
-            line-height:      2.222vh;
+            line-height:      2.222vh;             /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
         }      
-
 
 
     /*  ========================================================================  *\
@@ -360,38 +350,40 @@ main {
 
             .message-textarea {
                 position:         absolute;
-                width:            65.104vw;             /*  1250px/19.2(1vw)=65.104vw  */
-                height:           8.889vh;              /*  100px*1.2=120px/10.8(1vh)=11.111vh-padding(2.222vh)=8.889vh  */
+                width:            65.104vw;                   /*  1250px/19.2(1vw)=65.104vw  */
+                height:           8.889vh;                    /*  100px*1.2=120px/10.8(1vh)=11.111vh-padding(2.222vh)=8.889vh  */
                 padding:          1.777vh 0 0 2.666vh;  /*  16px*1.2=19.2px/10.8(1vh)=1.777vh & 
-                                                            24px*1.2=28.8px/10.8(1vh)=2.666vh  */
-                border:           0;
-                border-bottom:    .3333vh solid;
+                                                                  24px*1.2=28.8px/10.8(1vh)=2.666vh  */
+                border:           0;                          /*  0px  */
+                border-bottom:    0.333vh solid;              /*  3.6px  */
                 border-color:     transparent;
-                outline:          0;
+                outline:          0;                          /*  0px  */
                 background-color: #F4F3F5;
-                opacity:          0.75;
+                opacity:          0.75;                       /*  75%  */
             }
 
                 .message-textarea:focus { 
                     border-bottom: 3px solid #6200ea;
-                    opacity:       1;
+                    opacity:       1;                    /*  100%  */
                 }
 
                 .message-textarea::placeholder {
                     font-weight: bold;
-                    opacity:     0.25;
+                    opacity:     0.25;  /*  25%  */
                 }
 
-            .message-paperclip-icon,
-            .message-smile-icon {
-                position:  absolute;
-                top:       1.6666vh;
-                right:     5.625vw;
-                font-size: 2.2222vh;
-                opacity:   0.25;
-            }
-
-            .message-paperclip-icon { right: 8.75vw; }
+                .message-paperclip-icon,
+                .message-smile-icon {
+                    position:  absolute;
+                    top:       1.666vh;   /*  15px*1.2=18px/10.8(1vh)=1.666vh  */
+                    right:     11.574vh;  /*  125px  */
+                    font-size: 2.222vh;   /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
+                    opacity:   0.25;      /*  25%  */
+                }
+    
+                .message-paperclip-icon { 
+                    right: 18.055vh;  /*  195px  */ 
+                }
 
             .message-button {
                 float:            right;

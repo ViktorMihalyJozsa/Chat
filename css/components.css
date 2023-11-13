@@ -60,6 +60,16 @@ h3 {
         font: normal normal normal 14px/16px Montserrat;
     }
 
+    .chat-times-left,
+    .chat-times-right,
+    .chat-typing {
+        text-transform: uppercase;
+        font-size:      1.333vh;    /*  12px*1.2=14.4px/10.8(1vh)=1.333vh  */
+        font-weight:    bold;
+        letter-spacing: 0.15vw;     /*  3px  */
+        color:          #b2acba;
+    }
+
     .user-box-text {
         font: normal normal normal 14px/20px Montserrat;
     }
