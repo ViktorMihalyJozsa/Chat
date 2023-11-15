@@ -145,8 +145,8 @@
 aside {
     grid-area: aside;
 
-    width:     auto;
-    height:    auto;
+    width:   auto;
+    height:  auto;
 }
 
 
@@ -155,7 +155,7 @@ aside {
     \*  ========================================================================  */
 
     ul {
-        width:            auto;
+        width:            19vw;  /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
         height:           auto;
         background-color: #FFFFFF;
     }
@@ -168,11 +168,40 @@ aside {
 
             .user-box-text {
                 white-space:    nowrap;
-                width:          19vw;
+                width:          19vw;  /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
                 text-overflow:  ellipsis;
                 overflow:       hidden;
                 margin:         0 0 0.5555vh 4.063vw;  /*  0 0 6px 80px  */
             }
+
+@media(max-width: 768px) {
+    aside {
+        grid-area: aside;
+        
+        height:  auto;
+    }
+
+        ul {
+            width:            85.937vw;   /*  660px/7.68(1vw)=85.973vw  */
+            height:           auto;
+            background-color: #FFFFFF;
+        }
+    
+            li {
+                height:        5.556vh;              /*  80px*1.2=96px/10.8(1vh)=8.888vh-paddings(2*1.666vh=3.332vh)=5.556vh  */
+                padding:       1.666vh;              /*  15px*1.2=18px/10.8(1vh)=1.666vh  */
+                border-bottom: 1px solid #F4F3F5;
+            }
+    
+                .user-box-text {
+                    white-space:    nowrap;
+                    width:          78.125vw;              /*  600px/7.68(1vw)=78.125vw  */
+                    text-overflow:  ellipsis;
+                    overflow:       hidden;
+                    margin:         0 0 0.5555vh 10.416vw;  /*  0 0 6px 80px  */
+                }
+    
+}
 
 
     /*  ========================================================================  *\
@@ -193,6 +222,7 @@ aside {
                 width:          5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
                 height:         5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
                 margin-right:   0.937vw;
+                left:           0;
                 border-radius:  50%;
             }
 
@@ -200,7 +230,6 @@ aside {
                 position:       absolute;
                 width:          5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
                 height:         5.555vh;  /*  50px*1.2=60px/10.8(1vh)=5.555vh  */
-                margin-right:   0;
                 right:          0;
                 border-radius:  50%;
                 bottom:         1.111vh;

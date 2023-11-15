@@ -47,6 +47,13 @@ h3 {
     color:       #6200EA; 
 }
 
+@media(max-width: 768px) {
+    h3 {
+        margin-left: 10.416vw;  /*  80px  */
+        color:       #6200EA; 
+    }
+}
+
 .user-box-text,
 .chat-content-left-text,
 .chat-content-right-text {
@@ -58,6 +65,11 @@ h3 {
     .chat-content-left-text,
     .chat-content-right-text {
         font: normal normal normal 14px/16px Montserrat;
+    }
+
+    .chat-content-right-text {
+        color:   #FFFFFF;
+        opacity: 1;
     }
 
     .chat-times-left,
@@ -81,11 +93,6 @@ h3 {
         opacity: 1;
     }
 
-    .chat-content-right-text {
-        color:   #FFFFFF;
-        opacity: 1;
-    }
-
 .form-text {
     text-transform: none;
     text-align:     left;
@@ -93,16 +100,10 @@ h3 {
     letter-spacing: 0px;
 }
 
-a, a:hover, 
-a:visited,
-a:active {
-    text-decoration: none;
-    cursor:          pointer;
-}
-
 .user-box {
     display:       inline-block;
     margin:        0;                        /*  0px  */
+    padding:       1.852vh;                  /*  20px  */
     border-left:   0.555vh solid #FFFFFF;  /*  5px*1.2=6px/10.8(1vh)=0.555vh  */
 }
 
@@ -118,4 +119,11 @@ a:active {
     letter-spacing: 2.4px;
     color:          #6200EA;
     opacity:        1;
+}
+
+a, a:hover, 
+a:visited,
+a:active {
+    text-decoration: none;
+    cursor:          pointer;
 }
