@@ -24,24 +24,45 @@
 /*  ========================================================================  *\
     
     * C O M M E N T
-    
-    * CONTAINER
+
+    * C O N T A I N E R
     *     .container;
     *      @media(max-width: 768px);
 
-    * ASIDE
-    *     section;
-    *         .search;
-    *         .img-search;
-    *     aside;
-    *         figure;
-    *         .button;
+    * S E A R C H
+    *     .search-section;
+    *         .search-form;
+    *             .search;
+    *                 .search:focus;
+    *                 .search::placeholder;
+    *             .search-button;
+    *                 .search-icon;
     
-    * MAIN
-    *     header;
-    *     main;
-    *         .comment;
-    *         .form;
+    * M A I N
+    *     C H A T
+    *         .chat;
+    *             .chat::-webkit-scrollbar;
+    *             .chat-message;
+    *             .clearfix;
+    *             .chat-times-left; 
+    *             .chat-typing;
+    *             .chat-times-right;
+    *              @media(max-width: 768px);
+    *             .chat-typing;
+    *             .chat-content-left;
+    *             .chat-content-right;     
+
+    *     M E S S E A G E
+    *         .message-section;
+    *             .message-form;
+    *                 .message-textarea;
+    *                     .message-textarea:focus;
+    *                     .message-textarea::placeholder;
+    *                     .message-paperclip-icon;
+    *                     .message-smile-icon;
+    *                     .message-paperclip-icon;
+    *                 .message-button;
+    *                     .button-icon;
 
 \*  ========================================================================  */
 
@@ -307,11 +328,20 @@ main {
     .chat {
         height:            64.445vh;                       /*  680px*1.2=816px/10.8(1vh)=75.555vh
                                                               -padings(4.444vh+6.666vh=11.11vh)=64.445vh  */
-
         padding:           4.444vh 3.75vw 6.666vh 3.75vw;  /*  48px 60px 72px 60px  */
         overflow-y:        scroll;
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;     /* Firefox */
+
         background-color:  #F4F3F5;
       }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+        .chat::-webkit-scrollbar { 
+            display: none; 
+        }
       
         .chat-message { 
             position: relative;
@@ -323,37 +353,44 @@ main {
             clear:    both;
         }
       
-        .chat-times-left, .chat-typing {
+        .chat-times-left {
             float: left;
-            margin: 0 0 0.555vh 3.75vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+            margin: 0 0 0.555vh 7.777vh;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
         }
 
         .chat-times-right {
             float:  right;
-            margin: 0 3.75vw 0.555vh 30vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+            margin: 0 7.777vh 0.555vh 30vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+        }
+
+        @media(max-width: 768px) {
+            .chat-times-right {
+                float:  right;
+                margin: 0 7.777vh 0.555vh 27vw;  /* 5px*1.2=6px/10.8(1vh)=0.555vh & 60px*1.2=72px/19.2(1vw)=3.75vw   */
+            }
         }
 
         .chat-typing {
             float:  left;
-            margin: 18.518vh 0 0.555vh 3.75vw;  /*  200px 0px 6px 720px  */
+            margin: 18.518vh 0 0.555vh 7.777vh;  /*  200px 0px 6px 720px  */
         }
       
         .chat-content-left {
-            width:            37.5vw;              /*  600px*1.2=720px/19.2(1vw)=37.5vw  */
-            padding:          2.222vh 1.25vw;      /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
+            width:            37.5vw;               /*  600px*1.2=720px/19.2(1vw)=37.5vw  */
+            padding:          2.222vh 1.25vw;       /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
             border-radius:    0 15px 15px 15px;
-            margin:           0 0 1.111vh 3.75vw;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 60px*1.2=72px/19.2(1vw)=3.75vw  */
+            margin:           0 0 1.111vh 7.777vh;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 70px*1.2=84px/10.8(1vh)=7.777vh  */
+            line-height:      2.222vh;              /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
             background-color: #ffffff;
-            line-height:      2.222vh;             /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
         }
       
         .chat-content-right {
-            width:            30vw;                /*  480px*1.2=576px/19.2(1vw)=30vw  */
-            padding:          2.222vh 1.25vw;      /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
+            width:            30vw;                 /*  480px*1.2=576px/19.2(1vw)=30vw  */
+            padding:          2.222vh 1.25vw;       /*  20px*1.2=24px/10.8(1vh)=2.222vh & 20px*1.02=24px/19.2(1vw)=1.25vw  */
             border-radius:    15px 15px 0 15px;
-            margin:           0 3.75vw 1.111vh 0;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 60px*1.2=72px/19.2(1vw)=3.75vw  */
+            margin:           0 7.777vh 1.111vh 0;  /*  10px*1.2=12px/10.8(1vh)=1.111vh & 70px*1.2=84px/10.8(1vh)=7.777vh  */
+            line-height:      2.222vh;              /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
             background-color: #b2acba;
-            line-height:      2.222vh;             /*  20px*1.2=24px/10.8(1vh)=2.222vh  */
         }      
 
 
@@ -379,16 +416,16 @@ main {
 
             .message-textarea {
                 position:         absolute;
-                width:            65.104vw;                   /*  1250px/19.2(1vw)=65.104vw  */
-                height:           8.889vh;                    /*  100px*1.2=120px/10.8(1vh)=11.111vh-padding(2.222vh)=8.889vh  */
+                width:            65.104vw;             /*  1250px/19.2(1vw)=65.104vw  */
+                height:           8.889vh;              /*  100px*1.2=120px/10.8(1vh)=11.111vh-padding(2.222vh)=8.889vh  */
                 padding:          1.777vh 0 0 2.666vh;  /*  16px*1.2=19.2px/10.8(1vh)=1.777vh & 
-                                                                  24px*1.2=28.8px/10.8(1vh)=2.666vh  */
-                border:           0;                          /*  0px  */
-                border-bottom:    0.333vh solid;              /*  3.6px  */
+                                                            24px*1.2=28.8px/10.8(1vh)=2.666vh  */
+                border:           0;                    /*  0px  */
+                border-bottom:    0.333vh solid;        /*  3.6px  */
                 border-color:     transparent;
-                outline:          0;                          /*  0px  */
+                outline:          0;                    /*  0px  */
                 background-color: #F4F3F5;
-                opacity:          0.75;                       /*  75%  */
+                opacity:          0.75;                 /*  75%  */
             }
 
                 .message-textarea:focus { 
@@ -427,10 +464,10 @@ main {
                 text-align:       center;
             }
 
-            .button-icon {
-                text-align:     center;
-                font:           normal normal bold 20px/20px Font Awesome 5 Free;
-                letter-spacing: 0px;
-                color:          #ffffff;
-                opacity:        1;
-            }
+                .button-icon {
+                    text-align:     center;
+                    font:           normal normal bold 20px/20px Font Awesome 5 Free;
+                    letter-spacing: 0px;
+                    color:          #ffffff;
+                    opacity:        1;
+                }
