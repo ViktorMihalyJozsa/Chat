@@ -21,6 +21,33 @@
 
     * C O M M E N T
 
+    * h1;
+    * h2, h3;
+    * h2;
+    * h3;
+    * @media(max-width: 768px);
+    * .user-box-text;
+    * .chat-content-left-text;
+    * .chat-content-right-text;
+    *     .chat-content-left-text;
+    *     .chat-content-right-text;
+    *     .chat-content-right-text;
+    *     .chat-times-leftl;
+    *     .chat-times-right;
+    *     .chat-typing;
+    *     .user-box-text;
+    *     .user-box-text;
+    *     .form-text;
+    *     .chat-content-left-text;
+    * .form-text;
+    * .user-box;
+    *     .user-box:hover;
+    *     .user-box:active;
+    * .button-text;
+    * a, a:hover;
+    * a:visited;
+    * a:active;
+
 \*  ========================================================================  */
 
 h1 {

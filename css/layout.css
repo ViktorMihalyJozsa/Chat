@@ -37,6 +37,31 @@
     *                 .search::placeholder;
     *             .search-button;
     *                 .search-icon;
+
+    * A S I D E
+    *     aside;
+    
+    * U S E R - L I S T
+    *         ul;
+    *             li;
+    *                 .user-box-text;
+    *         @media(max-width: 768px);
+    
+    * U S E R - I M A G E S
+    *             .user-images-header;
+    *             .user-images-left;
+    *             .user-images-right;
+    
+    * U S E R - L I S T - B U T T O N
+    *         .user-list-button;
+    
+    * H E A D E R
+    *     header;
+    *         .user-name;
+    *         .site-logo,
+    *         .site-logo-a,
+    *         .site-logo-img;
+    *         .student-name;
     
     * M A I N
     *     C H A T
