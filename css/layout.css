@@ -206,8 +206,8 @@ aside {
     }
 
         li {
-            height:        5.556vh;              /*  80px*1.2=96px/10.8(1vh)=8.888vh-paddings(2*1.666vh=3.332vh)=5.556vh  */
-            padding:       1.666vh;              /*  15px*1.2=18px/10.8(1vh)=1.666vh  */
+            height:        2.525vw;              /*  50px/19.2(1vw)=2.525vw  */
+            padding:       0.781vw;              /*  15px/19.2(1vw)=0.781vw  */
             border-bottom: 1px solid #F4F3F5;
         }
 
@@ -222,7 +222,8 @@ aside {
 @media(max-width: 768px) {
     aside {
         grid-area: aside;
-        
+    
+        width:   auto;
         height:  auto;
     }
 
