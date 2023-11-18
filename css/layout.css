@@ -200,7 +200,7 @@ aside {
     \*  ========================================================================  */
 
     ul {
-        width:            19vw;  /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
+        width:            19vw;       /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
         height:           auto;
         background-color: #FFFFFF;
     }
@@ -213,7 +213,7 @@ aside {
 
             .user-box-text {
                 white-space:    nowrap;
-                width:          19vw;  /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
+                width:          19vw;                  /*  365px*1.2=438px/10.8(1vh)=40.555vh  */
                 text-overflow:  ellipsis;
                 overflow:       hidden;
                 margin:         0 0 0.5555vh 4.063vw;  /*  0 0 6px 80px  */
@@ -243,9 +243,8 @@ aside {
                     width:          78.125vw;               /*  600px/7.68(1vw)=78.125vw  */
                     text-overflow:  ellipsis;
                     overflow:       hidden;
-                    margin:         0 0 0.5555vh 11.718vw;  /*  0 0 6px 90px  */
+                    margin:         0 0 0.5555vh 19.531vw;  /*  0 0 6px 150px  */
                 }
-    
 }
 
 
