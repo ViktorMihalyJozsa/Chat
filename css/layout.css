@@ -72,6 +72,7 @@
     *             .chat-times-left; 
     *             .chat-typing;
     *             .chat-times-right;
+    *              @media(max-width: 1025px);
     *              @media(max-width: 768px);
     *             .chat-typing;
     *             .chat-content-left;
@@ -455,13 +456,13 @@ main {
 
             @media(max-width: 1025px) {
                 .message-textarea {
-                    width:  60vw;  /*  75%  */
+                    width:  60vw;  /*  60%  */
                 }
             }
 
             @media(max-width: 768px) {
                 .message-textarea {
-                        width:  75vw;  /*  75%  */
+                    width:  75vw;  /*  75%  */
                 }
             }
 
