@@ -456,7 +456,7 @@ main {
 
             @media(max-width: 1025px) {
                 .message-textarea {
-                    width:  62.5vw;  /*  62.5%  */
+                    width:  60vw;  /*  60%  */
                 }
             }
 
