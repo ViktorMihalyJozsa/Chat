@@ -227,7 +227,7 @@ aside {
     }
 
         ul {
-            width:            85.937vw;   /*  660px/7.68(1vw)=85.973vw  */
+            width:            85.973vw;   /*  660px/7.68(1vw)=85.973vw  */
             height:           auto;
             background-color: #FFFFFF;
         }
@@ -240,7 +240,7 @@ aside {
     
                 .user-box-text {
                     white-space:    nowrap;
-                    width:          78.125vw;               /*  600px/7.68(1vw)=78.125vw  */
+                    width:          72.916vw;               /*  560px/7.68(1vw)=72.916vw  */
                     text-overflow:  ellipsis;
                     overflow:       hidden;
                     margin:         0 0 0.5555vh 16.276vw;  /*  0 0 6px 125px  */
