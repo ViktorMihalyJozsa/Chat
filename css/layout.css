@@ -453,6 +453,12 @@ main {
                 opacity:          0.75;                  /*  75%  */
             }
 
+            @media(max-width: 1025px) {
+                .message-textarea {
+                    width:  60vw;  /*  75%  */
+                }
+            }
+
             @media(max-width: 768px) {
                 .message-textarea {
                         width:  75vw;  /*  75%  */
